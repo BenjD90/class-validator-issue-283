@@ -5,10 +5,10 @@
     `yarn install`
   
 2. Run the project:
-    `yarn dev`
+    `yarn start`
 3. Check logs
 4. Checkout branch `class-validator-0.9.1`: `git checkout class-validator-0.9.1`
-5. Do it again, `yarn install`, `yarn dev` => __**The error is here**__
+5. Do it again, `yarn install`, `yarn start` => __**The error is here**__
 
 # Error
 ```json
