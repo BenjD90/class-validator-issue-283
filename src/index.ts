@@ -20,7 +20,11 @@ const expressApp = createExpressServer({
      */
     controllers: [
         MessagesController
-    ]
+    ],
+    validation: {
+        forbidNonWhitelisted: true,
+        whitelist: true
+    }
 });
 
 /**
@@ -45,6 +49,7 @@ console.log(`TESTS - START`);
         },
         json: true
     });
+    console.log('req2 : ', req2);
     
     try {
         const req3 = await rpn({
@@ -64,5 +69,5 @@ console.log(`TESTS - START`);
 .then(() => console.log('TESTS - END OK'))
 .catch((e) => {
     console.error('TESTS - END KO', e)
-    console.log('TESTS - HTTP Error : ', e.error)
+    console.log('\n\n\n TESTS - HTTP Error : ', JSON.stringify(e.error, null, 2))
 });

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build && node ./build/app.js",
-    "dev": "nodemon -V --exec 'ts-node' src/index.ts",
+    "dev": "nodemon --exec 'ts-node' src/index.ts",
     "build": "tsc"
   },
   "author": {

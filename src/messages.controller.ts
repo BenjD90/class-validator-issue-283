@@ -13,7 +13,7 @@ export class MessagesController {
 
 	@Post("/")
 	public async validate(@Body() message: Message): Promise<any> {
-		return { ok: true };
+		return { ok: true, message };
 	}
 
 	@Post('/allow-all')
